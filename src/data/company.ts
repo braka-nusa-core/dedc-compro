@@ -7,15 +7,15 @@ export const company = {
   description:
     "DEDC adalah Professional Engineering Training Center yang membantu peserta meningkatkan kompetensi industri dan mempersiapkan karier di bidang Engineering, Drafting, EPC, Oil & Gas, Industrial Plant, Building, dan MEP.",
   contact: {
-    whatsapp: process.env["NEXT_PUBLIC_WA_NUMBER"] ?? "6281234567890",
-    email: "info@dedc.co.id",
-    address: "Jakarta, Indonesia", // TODO: Replace with full address
-    operationalHours: "Senin – Sabtu, 09.00 – 17.00 WIB",
+    whatsapp: process.env["NEXT_PUBLIC_WA_NUMBER"] ?? "6281290034421",
+    email: "dedc.drafting@gmail.com",
+    address: "The mahaka platinum cluster, Jl. Boulevard Grand Depok City Blk. C3, Jatimulya, Kec. Cilodong, Kota Depok, Jawa Barat 16414", // TODO: Replace with full address
+    operationalHours: "Senin – Sabtu, 10.00 – 17.00 WIB",
   },
   social: {
-    instagram: "https://instagram.com/dedc_official",
-    youtube: "https://youtube.com/@dedc",
-    linkedin: "https://linkedin.com/company/dedc",
+    instagram: "https://www.instagram.com/kursusautocaddepok",
+    youtube: "https://www.youtube.com/@kanggambar734",
+    linkedin: "https://www.linkedin.com/in/dedc-depok-971699215/",
   },
   vision:
     "Menjadi Professional Engineering Training Center terdepan di Indonesia yang menghasilkan tenaga ahli siap industri.",

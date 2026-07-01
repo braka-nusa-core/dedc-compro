@@ -9,11 +9,11 @@ import { staggerContainer, fadeIn, fadeUp } from "@/lib/animations";
 import type { Program } from "@/types";
 
 // ─── Design tokens ────────────────────────────────────────────────
-const EI    = "rgba(60,100,180,0.16)";
-const EI_T  = "rgba(60,100,180,0.42)";
+const EI = "rgba(60,100,180,0.16)";
+const EI_T = "rgba(60,100,180,0.42)";
 const GREEN = "#1A8C2E";
-const INK   = "#0D1117";
-const BG    = "#F7F9FC";
+const INK = "#0D1117";
+const BG = "#F7F9FC";
 
 // ─── Technical schematic per program slug ─────────────────────────
 // Right column: an SVG engineering schematic unique to each program.
@@ -21,10 +21,10 @@ const BG    = "#F7F9FC";
 // Engineering notation that communicates the discipline visually.
 
 const SCHEMATICS: Record<string, React.FC> = {
-  "autocad":          AutoCADSchematic,
+  "autocad": AutoCADSchematic,
   "autocad-plant-3d": Plant3DSchematic,
-  "revit-mep":        RevitMEPSchematic,
-  "e3d":              E3DSchematic,
+  "revit-mep": RevitMEPSchematic,
+  "e3d": E3DSchematic,
 };
 
 interface Props {
@@ -32,8 +32,8 @@ interface Props {
 }
 
 export function ProgramDetailHeroSection({ program }: Props) {
-  const reduce    = useReducedMotion();
-  const enter     = reduce ? fadeIn : fadeUp;
+  const reduce = useReducedMotion();
+  const enter = reduce ? fadeIn : fadeUp;
   const Schematic = SCHEMATICS[program.slug] ?? AutoCADSchematic;
 
   return (
@@ -167,9 +167,9 @@ export function ProgramDetailHeroSection({ program }: Props) {
               aria-label="Spesifikasi program"
             >
               {[
-                { label: "Duration",    value: program.duration         },
+                { label: "Duration", value: program.duration },
                 { label: "Certificate", value: program.hasCertificate ? "Professional" : "Completion" },
-                { label: "Project",     value: "Industry Based"         },
+                { label: "Project", value: "Industry Based" },
               ].map((spec, i) => (
                 <div
                   key={spec.label}
@@ -254,7 +254,7 @@ export function ProgramDetailHeroSection({ program }: Props) {
 // Each communicates the discipline through engineering notation.
 
 function AutoCADSchematic() {
-  const EI  = "rgba(60,100,180,0.18)";
+  const EI = "rgba(60,100,180,0.18)";
   const EI_T = "rgba(60,100,180,0.45)";
   const GREEN = "#1A8C2E";
 
@@ -296,8 +296,8 @@ function AutoCADSchematic() {
         <text x="6" y="155" textAnchor="middle" transform="rotate(-90,6,155)" style={{ fontSize: 8, fill: EI_T, fontFamily: "monospace", letterSpacing: "0.1em" }}>3600</text>
 
         {/* Cross hatching — wall thickness */}
-        {[0,8,16,24,32].map(offset => (
-          <line key={offset} x1={32} y1={20+offset} x2={32+offset} y2={20} stroke={EI} strokeWidth="0.4" opacity="0.5" />
+        {[0, 8, 16, 24, 32].map(offset => (
+          <line key={offset} x1={32} y1={20 + offset} x2={32 + offset} y2={20} stroke={EI} strokeWidth="0.4" opacity="0.5" />
         ))}
 
         {/* Grid ref labels */}
@@ -335,7 +335,7 @@ function AutoCADSchematic() {
 }
 
 function Plant3DSchematic() {
-  const EI   = "rgba(60,100,180,0.18)";
+  const EI = "rgba(60,100,180,0.18)";
   const EI_T = "rgba(60,100,180,0.45)";
   const GREEN = "#1A8C2E";
 
@@ -381,17 +381,17 @@ function Plant3DSchematic() {
         {[{ x: 120, y: 44, label: "FT-101" }, { x: 290, y: 44, label: "PT-201" }].map((b) => (
           <g key={b.label}>
             <circle cx={b.x} cy={b.y} r="14" fill="none" stroke={EI} strokeWidth="1" />
-            <text x={b.x} y={b.y+4} textAnchor="middle" style={{ fontSize: 6.5, fill: EI_T, fontFamily: "monospace" }}>{b.label}</text>
+            <text x={b.x} y={b.y + 4} textAnchor="middle" style={{ fontSize: 6.5, fill: EI_T, fontFamily: "monospace" }}>{b.label}</text>
           </g>
         ))}
 
         {/* Flow direction arrows */}
         {[160, 240, 320].map((x) => (
-          <polygon key={x} points={`${x-5},135 ${x+5},140 ${x-5},145`} fill={GREEN} fillOpacity="0.5" />
+          <polygon key={x} points={`${x - 5},135 ${x + 5},140 ${x - 5},145`} fill={GREEN} fillOpacity="0.5" />
         ))}
 
         {/* Pipe labels */}
-        <text x="200" y="128" textAnchor="middle" style={{ fontSize: 7, fill: EI_T, fontFamily: "monospace", letterSpacing: "0.06em" }}>4" SCH40 CS · LINE-001</text>
+        <text x="200" y="128" textAnchor="middle" style={{ fontSize: 7, fill: EI_T, fontFamily: "monospace", letterSpacing: "0.06em" }}>4&quot; SCH40 CS · LINE-001</text>
 
         {/* Title block */}
         <rect x="20" y="268" width="360" height="44" fill="none" stroke={EI} strokeWidth="0.75" />
@@ -410,7 +410,7 @@ function Plant3DSchematic() {
 }
 
 function RevitMEPSchematic() {
-  const EI   = "rgba(60,100,180,0.18)";
+  const EI = "rgba(60,100,180,0.18)";
   const EI_T = "rgba(60,100,180,0.45)";
   const GREEN = "#1A8C2E";
 
@@ -445,7 +445,7 @@ function RevitMEPSchematic() {
         <line x1="100" y1="155" x2="180" y2="155" stroke={GREEN} strokeWidth="1" strokeOpacity="0.5" />
         <circle cx="100" cy="135" r="8" fill="none" stroke={GREEN} strokeWidth="1" strokeOpacity="0.6" />
         <circle cx="180" cy="135" r="8" fill="none" stroke={GREEN} strokeWidth="1" strokeOpacity="0.6" />
-        <text x="140" y="150" textAnchor="middle" style={{ fontSize: 6.5, fill: EI_T, fontFamily: "monospace" }}>COLD WATER 2"</text>
+        <text x="140" y="150" textAnchor="middle" style={{ fontSize: 6.5, fill: EI_T, fontFamily: "monospace" }}>COLD WATER 2&quot;</text>
 
         {/* Electrical — conduit runs */}
         <line x1="240" y1="120" x2="340" y2="120" stroke="rgba(180,100,60,0.4)" strokeWidth="1.5" strokeDasharray="6,2" />
@@ -463,13 +463,13 @@ function RevitMEPSchematic() {
         <line x1="36" y1="224" x2="216" y2="224" stroke={EI} strokeWidth="0.5" />
         <text x="126" y="220" textAnchor="middle" style={{ fontSize: 6.5, fill: EI_T, fontFamily: "monospace", letterSpacing: "0.08em" }}>LEGEND</text>
         {[
-          { y: 234, color: "rgba(60,100,180,0.6)",    label: "HVAC" },
-          { y: 246, color: GREEN,                       label: "PLUMBING" },
-          { y: 258, color: "rgba(180,100,60,0.7)",    label: "ELECTRICAL" },
+          { y: 234, color: "rgba(60,100,180,0.6)", label: "HVAC" },
+          { y: 246, color: GREEN, label: "PLUMBING" },
+          { y: 258, color: "rgba(180,100,60,0.7)", label: "ELECTRICAL" },
         ].map((l) => (
           <g key={l.label}>
             <line x1="44" y1={l.y} x2="64" y2={l.y} stroke={l.color} strokeWidth="2" />
-            <text x="70" y={l.y+3} style={{ fontSize: 6, fill: EI_T, fontFamily: "monospace", letterSpacing: "0.06em" }}>{l.label}</text>
+            <text x="70" y={l.y + 3} style={{ fontSize: 6, fill: EI_T, fontFamily: "monospace", letterSpacing: "0.06em" }}>{l.label}</text>
           </g>
         ))}
 
@@ -491,7 +491,7 @@ function RevitMEPSchematic() {
 }
 
 function E3DSchematic() {
-  const EI   = "rgba(60,100,180,0.18)";
+  const EI = "rgba(60,100,180,0.18)";
   const EI_T = "rgba(60,100,180,0.45)";
   const GREEN = "#1A8C2E";
 

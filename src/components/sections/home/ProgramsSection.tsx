@@ -8,7 +8,7 @@ import { ArrowRight, Clock, Award, Wifi, MapPin } from "lucide-react";
 import { SectionHeader } from "@/components/common/SectionHeader";
 import { GreenBadge } from "@/components/common/GreenBadge";
 import { programs } from "@/data/programs";
-import { staggerContainer, fadeUp, fadeIn } from "@/lib/animations";
+import { staggerContainer,  fadeIn } from "@/lib/animations";
 
 // Engineering pipeline codes — one per program
 const PROG_CODES = ["PRG-001", "PRG-002", "PRG-003", "PRG-004"] as const;

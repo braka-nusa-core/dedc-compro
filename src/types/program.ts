@@ -28,6 +28,11 @@ export interface Program {
   heroSrc: string;
   featured?: boolean;
   lastBatch?: string;
+  ghostWord?: string;
+  code?: string;
+  heroTitle?: string;
+  heroSubtitle?: string;
+  heroDescription?: string;
 }
 
 export interface ProgramCardData {

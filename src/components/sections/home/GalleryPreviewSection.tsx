@@ -11,8 +11,6 @@ import { galleryImages, galleryCategories } from "@/data/gallery";
 import { staggerContainer, fadeIn } from "@/lib/animations";
 import type { GalleryImage } from "@/types";
 
-const EI_TEXT = "rgba(60,100,180,0.40)";
-
 // Bento layout — varied spans create a modern, non-uniform grid.
 // 6 images total: 1 wide hero tile + 5 tiles of mixed sizes.
 const preview = galleryImages.slice(0, 6);
@@ -31,7 +29,7 @@ const categoryLabel: Record<string, string> = Object.fromEntries(
   galleryCategories.map((c) => [c.key, c.label])
 );
 
-function GalleryTile({ image, index, large }: { image: GalleryImage; index: number; large?: boolean }) {
+function GalleryTile({ image, large }: { image: GalleryImage; index: number; large?: boolean }) {
   const [open, setOpen] = useState(false);
 
   return (

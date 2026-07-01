@@ -14,12 +14,6 @@ const GREEN = "#1A8C2E";
 const INK   = "#0D1117";
 const BG    = "#F7F9FC";
 
-// Two services — the right-column schematic communicates both
-const SERVICES = [
-  { code: "SVC-01", label: "Corporate Training",   sub: "Upgrade internal capabilities"  },
-  { code: "SVC-02", label: "Talent Supply",         sub: "Industry-ready engineers"       },
-] as const;
-
 const PIPE_X = 44;
 
 export function CorporateHeroSection() {

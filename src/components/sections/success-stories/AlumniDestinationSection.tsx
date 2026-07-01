@@ -3,70 +3,70 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { fadeIn, fadeUp, staggerContainer } from "@/lib/animations";
 
-const EI    = "rgba(60,100,180,0.16)";
-const EI_T  = "rgba(60,100,180,0.42)";
+const EI = "rgba(60,100,180,0.16)";
+const EI_T = "rgba(60,100,180,0.42)";
 const GREEN = "#1A8C2E";
-const INK   = "#0D1117";
-const BG    = "#F7F9FC";
+const INK = "#0D1117";
+const BG = "#F7F9FC";
 
 // ── Network node definitions ──────────────────────────────────────
 // Positions within viewBox 0 0 700 420
 const NODES = [
   {
-    id:      "dedc",
-    code:    "NET-00",
-    name:    "DEDC Alumni",
-    cx:      350,
-    cy:      210,
-    type:    "core",     // large, green
+    id: "dedc",
+    code: "NET-00",
+    name: "DEDC Alumni",
+    cx: 350,
+    cy: 210,
+    type: "core",     // large, green
   },
   {
-    id:      "epc",
-    code:    "CMP-01",
-    name:    "EPC Company",
-    cx:      350,
-    cy:      52,
-    type:    "satellite",
+    id: "epc",
+    code: "CMP-01",
+    name: "EPC Company",
+    cx: 350,
+    cy: 52,
+    type: "satellite",
   },
   {
-    id:      "oil",
-    code:    "CMP-02",
-    name:    "Oil & Gas",
-    cx:      120,
-    cy:      120,
-    type:    "satellite",
+    id: "oil",
+    code: "CMP-02",
+    name: "Oil & Gas",
+    cx: 120,
+    cy: 120,
+    type: "satellite",
   },
   {
-    id:      "building",
-    code:    "CMP-03",
-    name:    "Building MEP",
-    cx:      580,
-    cy:      120,
-    type:    "satellite",
+    id: "building",
+    code: "CMP-03",
+    name: "Building MEP",
+    cx: 580,
+    cy: 120,
+    type: "satellite",
   },
   {
-    id:      "industrial",
-    code:    "CMP-04",
-    name:    "Industrial Plant",
-    cx:      120,
-    cy:      300,
-    type:    "satellite",
+    id: "industrial",
+    code: "CMP-04",
+    name: "Industrial Plant",
+    cx: 120,
+    cy: 300,
+    type: "satellite",
   },
   {
-    id:      "consultant",
-    code:    "CMP-05",
-    name:    "Consultant",
-    cx:      580,
-    cy:      300,
-    type:    "satellite",
+    id: "consultant",
+    code: "CMP-05",
+    name: "Consultant",
+    cx: 580,
+    cy: 300,
+    type: "satellite",
   },
   {
-    id:      "manufacturing",
-    code:    "CMP-06",
-    name:    "Manufacturing",
-    cx:      350,
-    cy:      368,
-    type:    "satellite",
+    id: "manufacturing",
+    code: "CMP-06",
+    name: "Manufacturing",
+    cx: 350,
+    cy: 368,
+    type: "satellite",
   },
 ] as const;
 
@@ -76,19 +76,19 @@ const CORE = NODES[0];
 const SATELLITES = NODES.slice(1);
 
 // Label anchor + offset per node (avoid edge overlap)
-const LABEL: Record<string, { anchor: string; dx: number; dy: number }> = {
-  dedc:          { anchor: "middle", dx:   0, dy:  -34 },
-  epc:           { anchor: "middle", dx:   0, dy:  -18 },
-  oil:           { anchor: "end",    dx: -16, dy:   -6 },
-  building:      { anchor: "start",  dx:  16, dy:   -6 },
-  industrial:    { anchor: "end",    dx: -16, dy:   18 },
-  consultant:    { anchor: "start",  dx:  16, dy:   18 },
-  manufacturing: { anchor: "middle", dx:   0, dy:   22 },
-};
+const LABEL = {
+  dedc: { anchor: "middle", dx: 0, dy: -34 },
+  epc: { anchor: "middle", dx: 0, dy: -18 },
+  oil: { anchor: "end", dx: -16, dy: -6 },
+  building: { anchor: "start", dx: 16, dy: -6 },
+  industrial: { anchor: "end", dx: -16, dy: 18 },
+  consultant: { anchor: "start", dx: 16, dy: 18 },
+  manufacturing: { anchor: "middle", dx: 0, dy: 22 },
+} as const;
 
 export function AlumniDestinationSection() {
   const reduce = useReducedMotion();
-  const enter  = reduce ? fadeIn : fadeUp;
+  const enter = reduce ? fadeIn : fadeUp;
 
   return (
     <section
@@ -233,7 +233,7 @@ export function AlumniDestinationSection() {
                   <line
                     key={`edge-${n.id}`}
                     x1={CORE.cx} y1={CORE.cy}
-                    x2={n.cx}    y2={n.cy}
+                    x2={n.cx} y2={n.cy}
                     stroke={EI}
                     strokeWidth={1.5}
                     strokeLinecap="round"
@@ -387,8 +387,8 @@ export function AlumniDestinationSection() {
                   }}
                   className="flex flex-col gap-2 p-5"
                   style={{
-                    borderRight:  i % 2 === 0 ? "1px solid rgba(0,0,0,0.07)" : undefined,
-                    borderBottom: i < 4       ? "1px solid rgba(0,0,0,0.07)" : undefined,
+                    borderRight: i % 2 === 0 ? "1px solid rgba(0,0,0,0.07)" : undefined,
+                    borderBottom: i < 4 ? "1px solid rgba(0,0,0,0.07)" : undefined,
                   }}
                 >
                   <span className="font-mono"

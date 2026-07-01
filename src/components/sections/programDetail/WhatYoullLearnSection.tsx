@@ -5,24 +5,24 @@ import { staggerContainer, fadeIn, fadeUp } from "@/lib/animations";
 import type { LearningOutcome } from "@/types";
 
 // ─── Design tokens ────────────────────────────────────────────────
-const EI    = "rgba(60,100,180,0.16)";
-const EI_T  = "rgba(60,100,180,0.42)";
-const INK   = "#0D1117";
-const BG    = "#F7F9FC";
+const EI = "rgba(60,100,180,0.16)";
+const EI_T = "rgba(60,100,180,0.42)";
+const INK = "#0D1117";
+const BG = "#F7F9FC";
 
 interface Props {
-  title?:           string;
-  subtitle?:        string;
+  title?: string;
+  subtitle?: string;
   learningOutcomes: LearningOutcome[];
 }
 
 export function WhatYoullLearnSection({
-  title    = "Yang Akan Anda Kuasai",
+  title = "Yang Akan Anda Kuasai",
   subtitle = "Seluruh materi disusun mengikuti kebutuhan proyek engineering modern, dimulai dari fundamental hingga workflow yang digunakan di industri.",
   learningOutcomes,
 }: Props) {
   const reduce = useReducedMotion();
-  const enter  = reduce ? fadeIn : fadeUp;
+  const enter = reduce ? fadeIn : fadeUp;
 
   return (
     <section
@@ -77,7 +77,7 @@ export function WhatYoullLearnSection({
           >
             <motion.div variants={fadeIn} className="hidden lg:flex items-center gap-0" aria-hidden="true">
               <div className="flex flex-col gap-0.5 pr-4">
-                <span className="font-mono" style={{ fontSize: 8, letterSpacing: "0.16em", color: EI_T }}>WHAT YOU'LL LEARN</span>
+                <span className="font-mono" style={{ fontSize: 8, letterSpacing: "0.16em", color: EI_T }}>WHAT YOU&apos;LL LEARN</span>
                 <span className="font-mono font-semibold" style={{ fontSize: 9, letterSpacing: "0.14em", color: EI_T }}>SPEC-DOC-001</span>
                 <span className="font-mono" style={{ fontSize: 8, letterSpacing: "0.14em", color: EI_T }}>REV-A1</span>
               </div>
@@ -88,7 +88,7 @@ export function WhatYoullLearnSection({
             <motion.p variants={fadeIn} className="font-mono"
               style={{ fontSize: 9, letterSpacing: "0.2em", color: EI_T, textTransform: "uppercase" }}
               aria-hidden="true">
-              What You'll Learn
+              What You&apos;ll Learn
             </motion.p>
 
             <motion.h2
@@ -96,10 +96,10 @@ export function WhatYoullLearnSection({
               variants={enter}
               className="font-heading font-bold"
               style={{
-                fontSize:      "clamp(1.875rem, 3vw, 3rem)",
-                lineHeight:    1.08,
+                fontSize: "clamp(1.875rem, 3vw, 3rem)",
+                lineHeight: 1.08,
                 letterSpacing: "-0.028em",
-                color:         INK,
+                color: INK,
               }}
             >
               {title}
@@ -109,9 +109,9 @@ export function WhatYoullLearnSection({
 
             <motion.p variants={enter} className="font-body"
               style={{
-                fontSize:   "clamp(0.9375rem, 1.2vw, 1rem)",
+                fontSize: "clamp(0.9375rem, 1.2vw, 1rem)",
                 lineHeight: 1.8,
-                color:      "#52606D",
+                color: "#52606D",
               }}
             >
               {subtitle}
@@ -149,7 +149,7 @@ export function WhatYoullLearnSection({
                     key={outcome.id}
                     variants={
                       reduce ? fadeIn : {
-                        hidden:  { opacity: 0, y: 14 },
+                        hidden: { opacity: 0, y: 14 },
                         visible: {
                           opacity: 1, y: 0,
                           transition: { delay: index * 0.08, duration: 0.45, ease: "easeOut" },
@@ -199,10 +199,10 @@ export function WhatYoullLearnSection({
                       <p
                         className="font-body"
                         style={{
-                          fontSize:   "clamp(0.9375rem, 1.3vw, 1.0625rem)",
+                          fontSize: "clamp(0.9375rem, 1.3vw, 1.0625rem)",
                           lineHeight: 1.72,
-                          color:      INK,
-                          maxWidth:   "54ch",
+                          color: INK,
+                          maxWidth: "54ch",
                         }}
                       >
                         {outcome.description}

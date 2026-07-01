@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion} from "framer-motion";
 import Image from "next/image";
 import { clients } from "@/data/clients";
 import { fadeIn } from "@/lib/animations";
@@ -8,7 +8,6 @@ import { fadeIn } from "@/lib/animations";
 const EI_TEXT = "rgba(60,100,180,0.40)";
 
 export function CorporateClientsSection() {
-  const reduce = useReducedMotion();
 
   return (
     <section

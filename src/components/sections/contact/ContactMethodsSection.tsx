@@ -4,7 +4,6 @@ import { motion, useReducedMotion } from "framer-motion";
 import { MessageCircle, Mail, Instagram } from "lucide-react";
 import { staggerContainer, fadeIn, fadeUp } from "@/lib/animations";
 
-const EI    = "rgba(60,100,180,0.16)";
 const EI_T  = "rgba(60,100,180,0.42)";
 const GREEN = "#1A8C2E";
 const INK   = "#0D1117";

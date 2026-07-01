@@ -5,7 +5,7 @@ import {
   GraduationCap, Users, BookOpen, Infinity, Briefcase, Award,
 } from "lucide-react";
 import { SectionHeader } from "@/components/common/SectionHeader";
-import { staggerContainer, fadeUp, fadeIn } from "@/lib/animations";
+import { staggerContainer,  fadeIn } from "@/lib/animations";
 
 // Each feature has an engineering spec code
 const features = [
@@ -101,7 +101,6 @@ export function WhyChooseSection() {
             const Icon = f.icon;
             // Border logic: top border for all, right border for col 1 & 2 on desktop
             const isLastInRow = (i + 1) % 3 === 0;
-            const isBottomRow = i >= features.length - 3;
 
             return (
               <motion.div

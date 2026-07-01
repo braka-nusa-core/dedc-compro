@@ -10,7 +10,6 @@ import { WhyChooseSection } from "@/components/sections/home/WhyChooseSection";
 import { SuccessStoriesSection } from "@/components/sections/home/SuccessStoriesSection";
 import { TrainersSection } from "@/components/sections/home/TrainersSection";
 import { CorporateClientsSection } from "@/components/sections/home/CorporateClientsSection";
-import { TestimonialsSection } from "@/components/sections/home/TestimonialsSection";
 import { GalleryPreviewSection } from "@/components/sections/home/GalleryPreviewSection";
 import { FAQSection } from "@/components/sections/home/FAQSection";
 import { FinalCTASection } from "@/components/sections/home/FinalCTASection";

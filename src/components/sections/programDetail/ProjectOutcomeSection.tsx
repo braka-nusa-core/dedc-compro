@@ -30,7 +30,6 @@ interface Props {
 export function ProjectOutcomeSection({
   projectOutputs,
   careerDestinations,
-  closingStatement = "Bukan sekadar menyelesaikan pelatihan. Tetapi membangun fondasi untuk karier engineering.",
 }: Props) {
   const reduce = useReducedMotion();
   const enter  = reduce ? fadeIn : fadeUp;

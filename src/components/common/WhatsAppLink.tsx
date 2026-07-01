@@ -8,6 +8,9 @@ interface WhatsAppLinkProps {
   className?: string;
   /** Accessible label describing the destination — required when children is not text */
   ariaLabel?: string;
+  style?: React.CSSProperties;
+  onMouseEnter?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+  onMouseLeave?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
 export function WhatsAppLink({
@@ -16,6 +19,9 @@ export function WhatsAppLink({
   children,
   className,
   ariaLabel,
+  style,
+  onMouseEnter,
+  onMouseLeave,
 }: WhatsAppLinkProps) {
   const url = buildWAUrl(context, programName);
 
@@ -26,6 +32,9 @@ export function WhatsAppLink({
       rel="noopener noreferrer"
       aria-label={ariaLabel ?? `Hubungi DEDC via WhatsApp (tab baru)`}
       className={cn(className)}
+      style={style}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       {children}
     </a>

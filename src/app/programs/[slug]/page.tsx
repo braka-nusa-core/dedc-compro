@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { generatePageMetadata } from "@/lib/metadata";
-import { courseSchema } from "@/lib/schema";
 import { getProgramBySlug } from "@/data/programs";
 import { allProgramSlugs } from "@/config/programs";
 import { ProgramDetailHeroSection } from "@/components/sections/programDetail/ProgramDetailHeroSection";
 import { WhatYoullLearnSection } from "@/components/sections/programDetail/WhatYoullLearnSection";
 import { LearningExperienceSection } from "@/components/sections/programDetail/LearningExperienceSection";
-import { ProjectOutcomeSection } from "@/components/sections/programDetail/ProjectOutcomeSection";
 
 interface ProgramDetailPageProps {
   params: Promise<{ slug: string }>;
@@ -41,12 +39,6 @@ export default async function ProgramDetailPage({
   // program is defined after notFound() guard — safe to assert
   const p = program!;
 
-  const schema = courseSchema({
-    name: p.name,
-    description: p.description,
-    slug: p.slug,
-    duration: p.duration,
-  });
 
   console.log(p)
 

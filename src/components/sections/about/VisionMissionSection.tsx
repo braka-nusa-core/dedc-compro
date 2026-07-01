@@ -208,7 +208,6 @@ export function VisionMissionSection() {
           <div className="grid grid-cols-1 md:grid-cols-2">
             {missionPrinciples.map((p, i) => {
               const isRightCol = i % 2 !== 0;
-              const isTopRow = i < 2;
 
               return (
                 <motion.div

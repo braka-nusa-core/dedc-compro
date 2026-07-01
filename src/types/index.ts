@@ -1,0 +1,10 @@
+export type { Program, ProgramCardData, CurriculumItem, LearningOutcome, ProgramMode } from "./program";
+export type { Trainer, TrainerCardData } from "./trainer";
+export type { Alumni, SuccessStory } from "./alumni";
+export type { Testimonial, TestimonialSource } from "./testimonial";
+export type { CorporateClient, ClientIndustry } from "./client";
+export type { GalleryImage, GalleryCategory } from "./gallery";
+export type { FAQItem, FAQPage } from "./faq";
+export type { Article, ArticleCategory } from "./article";
+export type { NavItem, NavGroup, BreadcrumbItem } from "./navigation";
+export type { PageMeta } from "./metadata";

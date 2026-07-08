@@ -40,7 +40,7 @@ export function TrainerCard({ trainer, className, linkable = false }: TrainerCar
           ring
           className="ring-[rgba(50,215,75,0.2)] ring-offset-2"
         >
-          <AvatarImage src={trainer.photoSrc} alt={`Foto ${trainer.name}`} />
+          <AvatarImage src={trainer.imageSrc} alt={`Foto ${trainer.name}`} />
           <AvatarFallback>{initials(trainer.name)}</AvatarFallback>
         </Avatar>
 

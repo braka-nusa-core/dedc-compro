@@ -10,7 +10,7 @@ export const trainers: Trainer[] = [
     industries: ["Konstruksi", "Manufaktur", "Engineering"],
     experienceYears: 15,
     bio: "Praktisi engineering dengan 15+ tahun pengalaman di industri konstruksi dan manufaktur. Telah melatih lebih dari 500 peserta dari berbagai perusahaan.",
-    photoSrc: "/images/trainers/FIAN MAULANA - TRainer AUTO CAD..png",
+    imageSrc: "/images/trainers/FIAN MAULANA - TRainer AUTO CAD..png",
     programSlugs: ["autocad"],
   },
   {
@@ -21,7 +21,7 @@ export const trainers: Trainer[] = [
     industries: ["EPC", "Oil & Gas", "Industrial Plant"],
     experienceYears: 15,
     bio: "Engineer berpengalaman di proyek EPC dan Oil & Gas internasional. Pernah terlibat dalam proyek kilang minyak dan gas di Indonesia dan luar negeri.",
-    photoSrc: "/images/trainers/ETRISMON - TRAINER E3D.png",
+    imageSrc: "/images/trainers/ETRISMON - TRAINER E3D.png",
     programSlugs: ["autocad-plant-3d", "e3d"],
   },
 ];

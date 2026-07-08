@@ -6,7 +6,7 @@ export interface Trainer {
   industries: string[];
   experienceYears: number;
   bio: string;
-  photoSrc: string;
+  imageSrc: string;
   programSlugs: string[];
   linkedin?: string;
 }
@@ -17,5 +17,5 @@ export interface TrainerCardData {
   title: string;
   expertise: string[];
   experienceYears: number;
-  photoSrc: string;
+  imageSrc: string;
 }

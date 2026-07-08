@@ -459,7 +459,7 @@ interface PortraitProps {
     name:            string;
     title:           string;
     experienceYears: number;
-    photoSrc:        string;
+    imageSrc:        string;
     slug:            string;
   };
   size:      number;
@@ -495,7 +495,7 @@ function TrainerPortrait({
         }}
       >
         <Image
-          src={trainer.photoSrc}
+          src={trainer.imageSrc}
           alt={`${trainer.name} — ${trainer.title}`}
           fill
           className="object-cover object-top"

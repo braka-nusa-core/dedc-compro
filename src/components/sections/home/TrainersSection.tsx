@@ -82,13 +82,13 @@ export function TrainersSection() {
                   reduce
                     ? fadeIn
                     : {
-                        hidden: { opacity: 0, y: 16 },
-                        visible: {
-                          opacity: 1,
-                          y: 0,
-                          transition: { delay: i * 0.08, duration: 0.45, ease: "easeOut" },
-                        },
-                      }
+                      hidden: { opacity: 0, y: 16 },
+                      visible: {
+                        opacity: 1,
+                        y: 0,
+                        transition: { delay: i * 0.08, duration: 0.45, ease: "easeOut" },
+                      },
+                    }
                 }
                 className="relative flex flex-col items-center text-center gap-3 px-4 md:px-6 py-2"
                 style={{
@@ -111,7 +111,7 @@ export function TrainersSection() {
                   style={{ border: "1px solid rgba(0,0,0,0.08)" }}
                 >
                   <Image
-                    src={t.photoSrc}
+                    src={t.imageSrc}
                     alt={`Foto ${t.name}`}
                     fill
                     className="object-cover"

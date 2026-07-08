@@ -15,9 +15,9 @@ const NAV_LINKS = [
 ] as const;
 
 const CONTACT_DETAILS = [
-  "Surabaya, Indonesia",
-  "hello@dedc.id",
-  "+62 812 3456 7890",
+  "Depok, Indonesia",
+  "dedc.drafting@gmail.com",
+  "+62 812 9003 4421",
   "EST.2011",
 ] as const;
 

@@ -16,8 +16,8 @@ export const programs: Program[] = [
     trainerSlug: "trainer-1",
     featured: true,
     lastBatch: "Mei 2026",
-    thumbnailSrc: "/images/programs/autocad-thumb.jpg",
-    heroSrc: "/images/programs/autocad-hero.jpg",
+    thumbnailSrc: "/images/gallery/IMG_20251123_142906.jpg",
+    heroSrc: "/images/gallery/IMG_20251123_142906.jpg",
     highlights: ["Drafting 2D lengkap", "Pemodelan 3D dasar", "Plot & Layout", "Standar ISO"],
     curriculum: [
       {
@@ -58,8 +58,8 @@ export const programs: Program[] = [
     trainerSlug: "trainer-2",
     featured: true,
     lastBatch: "Mei 2026",
-    thumbnailSrc: "/images/programs/plant3d-thumb.jpg",
-    heroSrc: "/images/programs/plant3d-hero.jpg",
+    thumbnailSrc: "/images/gallery/IMG_20251130_162457.jpg",
+    heroSrc: "/images/gallery/IMG_20251130_162457.jpg",
     highlights: ["Piping design", "Equipment layout", "Isometric drawing", "P&ID integration"],
     curriculum: [
       {
@@ -99,8 +99,8 @@ export const programs: Program[] = [
     hasCertificate: true,
     trainerSlug: "trainer-3",
     lastBatch: "April 2026",
-    thumbnailSrc: "/images/programs/revit-mep-thumb.jpg",
-    heroSrc: "/images/programs/revit-mep-hero.jpg",
+    thumbnailSrc: "/images/gallery/IMG_20260215_122158.jpg",
+    heroSrc: "/images/gallery/IMG_20260215_122158.jpg",
     highlights: ["BIM workflow", "MEP coordination", "Clash detection", "Shop drawing"],
     curriculum: [
       {
@@ -140,8 +140,8 @@ export const programs: Program[] = [
     hasCertificate: true,
     trainerSlug: "trainer-2",
     lastBatch: "Maret 2026",
-    thumbnailSrc: "/images/programs/e3d-thumb.jpg",
-    heroSrc: "/images/programs/e3d-hero.jpg",
+    thumbnailSrc: "/images/gallery/IMG_20260222_100336.jpg",
+    heroSrc: "/images/gallery/IMG_20260222_100336.jpg",
     highlights: ["AVEVA E3D", "Piping modeling", "Structural modeling", "Report generation"],
     curriculum: [
       {

@@ -24,6 +24,17 @@ export const trainers: Trainer[] = [
     imageSrc: "/images/trainers/ETRISMON - TRAINER E3D.png",
     programSlugs: ["autocad-plant-3d", "e3d"],
   },
+  {
+    slug: "trainer-3",
+    name: "Ramdani",
+    title: "Trainer Auto Cad",
+    expertise: ["AutoCAD 2D/3D", "Teknik Gambar", "Standar ISO/ASME"],
+    industries: ["Konstruksi", "Manufaktur", "Engineering"],
+    experienceYears: 10,
+    bio: "Praktisi engineering dengan 10+ tahun pengalaman di industri konstruksi dan manufaktur. Telah melatih ratusan peserta dari berbagai perusahaan.",
+    imageSrc: "/images/trainers/RAMDANI.jpg",
+    programSlugs: ["autocad"],
+  },
 ];
 
 export function getTrainerBySlug(slug: string): Trainer | undefined {
